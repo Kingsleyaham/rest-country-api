@@ -6,7 +6,7 @@ import SearchFilterBar from "../components/SearchFilterBar";
 
 const Home = () => {
   return (
-    <Box>
+    <Box paddingBottom={5}>
       <Container maxWidth="lg">
         <SearchFilterBar />
         <Grid container spacing={7} display="flex" justifyContent="center">

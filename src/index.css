@@ -30,3 +30,19 @@ body {
   background-color: var(--light-background) !important;
   color: var(--light-text);
 }
+
+@media screen and (max-width: 1024px) {
+  .img-wrapper {
+    text-align: center;
+  }
+  .detail-img {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .detail-img {
+    height: 250px;
+    width: 100%;
+  }
+}
