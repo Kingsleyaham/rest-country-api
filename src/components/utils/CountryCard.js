@@ -6,24 +6,33 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 
-const CountryCard = () => {
+import { useNavigate } from "react-router-dom";
+
+const CountryCard = (props) => {
+  let navigate = useNavigate();
+
+  const redirectUser = (page) => navigate(`/${page}`);
+
   return (
-    <Grid item md={3} sm={6} marginTop={3}>
+    <Grid
+      item
+      lg={3}
+      md={4}
+      sm={6}
+      marginTop={3}
+      onClick={() => redirectUser(props.countryName)}
+    >
       <Card>
         <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-            alt="green iguana"
-          />
+          <CardMedia component="img" height="140" image={props.flag} />
           <CardContent>
             <Typography gutterBottom variant="h6" component="h3">
-              Germany
+              {props.countryName}
             </Typography>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box sx={{ display: "flex", alignItems: "baseline" }}>
               <Typography
                 variant="subtitle2"
+                gutterBottom
                 color="text.primary"
                 component="p"
               >
@@ -31,16 +40,18 @@ const CountryCard = () => {
               </Typography>
               <Typography
                 variant="body2"
+                gutterBottom
                 color="text.secondary"
                 component="p"
-                marginLeft={0.3}
+                marginLeft={0.5}
               >
-                120,00,556
+                {props.population.toLocaleString()}
               </Typography>
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box sx={{ display: "flex", alignItems: "baseline" }}>
               <Typography
                 variant="subtitle2"
+                gutterBottom
                 color="text.primary"
                 component="p"
               >
@@ -48,28 +59,31 @@ const CountryCard = () => {
               </Typography>
               <Typography
                 variant="body2"
+                gutterBottom
                 color="text.secondary"
                 component="p"
-                marginLeft={0.3}
+                marginLeft={0.5}
               >
-                Europe
+                {props.region}
               </Typography>
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box sx={{ display: "flex", alignItems: "baseline" }}>
               <Typography
                 variant="subtitle2"
+                gutterBottom
                 color="text.primary"
                 component="p"
               >
-                Country:
+                Capital:
               </Typography>
               <Typography
                 variant="body2"
+                gutterBottom
                 color="text.secondary"
                 component="p"
-                marginLeft={0.3}
+                marginLeft={0.5}
               >
-                Berlin
+                {props.capital}
               </Typography>
             </Box>
           </CardContent>
