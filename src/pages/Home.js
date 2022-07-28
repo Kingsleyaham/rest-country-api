@@ -7,11 +7,14 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 const Home = (props) => {
   const countries = props.countries;
-  console.log(countries);
+
   return (
     <Box paddingBottom={5}>
       <Container maxWidth="lg">
-        <SearchFilterBar />
+        <SearchFilterBar
+          fetchByRegion={props.fetchByRegion}
+          searchByCountry={props.searchByCountry}
+        />
         {props.isPending ? (
           <Box
             sx={{

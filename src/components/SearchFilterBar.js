@@ -5,8 +5,24 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
+import { useState } from "react";
 
-const SearchFilterBar = () => {
+const SearchFilterBar = (props) => {
+  const [selectedRegion, setSelectedRegion] = useState("select");
+  const [search, setSearch] = useState("");
+
+  const handleChange = (val) => {
+    props.fetchByRegion(val);
+    setSelectedRegion(val);
+    setSearch("");
+  };
+
+  const handleSearch = (val) => {
+    props.searchByCountry(val);
+    setSearch(val);
+    setSelectedRegion("select");
+  };
+
   return (
     <Grid
       container
@@ -36,6 +52,8 @@ const SearchFilterBar = () => {
                 </InputAdornment>
               ),
             }}
+            onChange={(e) => handleSearch(e.target.value)}
+            value={search}
             aria-describedby="search bar"
           />
         </FormControl>
@@ -50,13 +68,17 @@ const SearchFilterBar = () => {
           }}
         >
           <Select
-            defaultValue="filter"
-            labelId="demo-select-small"
-            id="demo-select-small"
+            labelId="regionSelect"
+            id="regionSelect"
+            onChange={(e) => handleChange(e.target.value)}
+            defaultValue="select"
+            value={selectedRegion}
           >
-            <MenuItem value="filter">Filter By Region</MenuItem>
+            <MenuItem value="select" disabled>
+              Filter By Region
+            </MenuItem>
             <MenuItem value="africa">Africa</MenuItem>
-            <MenuItem value="america">America</MenuItem>
+            <MenuItem value="americas">America</MenuItem>
             <MenuItem value="asia">Asia</MenuItem>
             <MenuItem value="europe">Europe</MenuItem>
             <MenuItem value="oceania">Oceania</MenuItem>
