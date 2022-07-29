@@ -19,6 +19,7 @@ const CountryCard = (props) => {
       lg={3}
       md={4}
       sm={6}
+      xs={12}
       marginTop={3}
       onClick={() => redirectUser(props.countryName)}
     >

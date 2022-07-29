@@ -71,6 +71,7 @@ const SearchFilterBar = (props) => {
             labelId="regionSelect"
             id="regionSelect"
             onChange={(e) => handleChange(e.target.value)}
+            onBlur={(e) => handleChange(e.target.value)}
             defaultValue="select"
             value={selectedRegion}
           >
