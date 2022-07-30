@@ -124,7 +124,7 @@ const Details = (props) => {
                       variant="subtitle1"
                       color="text.primary"
                       gutterBottom
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       lineHeight={1}
                     >
@@ -146,7 +146,7 @@ const Details = (props) => {
                       variant="subtitle1"
                       color="text.primary"
                       gutterBottom
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       lineHeight={1}
                     >
@@ -168,7 +168,7 @@ const Details = (props) => {
                       variant="subtitle1"
                       color="text.primary"
                       gutterBottom
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       lineHeight={1}
                     >
@@ -190,7 +190,7 @@ const Details = (props) => {
                       variant="subtitle1"
                       color="text.primary"
                       gutterBottom
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       lineHeight={1}
                     >
@@ -212,7 +212,7 @@ const Details = (props) => {
                       variant="subtitle1"
                       color="text.primary"
                       gutterBottom
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       lineHeight={1}
                     >
@@ -241,7 +241,7 @@ const Details = (props) => {
                       variant="subtitle1"
                       color="text.primary"
                       gutterBottom
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       lineHeight={1}
                     >
@@ -262,7 +262,7 @@ const Details = (props) => {
                       variant="subtitle1"
                       color="text.primary"
                       gutterBottom
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       lineHeight={1}
                     >
@@ -284,7 +284,7 @@ const Details = (props) => {
                       variant="subtitle1"
                       color="text.primary"
                       gutterBottom
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       lineHeight={1}
                     >
@@ -310,7 +310,7 @@ const Details = (props) => {
                     <Typography
                       variant="subtitle1"
                       color="text.primary"
-                      component="h6"
+                      component="h5"
                       fontWeight={800}
                       marginRight={0.5}
                     >

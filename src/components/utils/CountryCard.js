@@ -25,7 +25,12 @@ const CountryCard = (props) => {
     >
       <Card sx={{ backgroundColor: "paper" }}>
         <CardActionArea>
-          <CardMedia component="img" height="150" image={props.flag} />
+          <CardMedia
+            component="img"
+            height="150"
+            image={props.flag}
+            alt="flags"
+          />
           <CardContent>
             <Typography gutterBottom variant="h6" component="h3">
               {props.countryName}

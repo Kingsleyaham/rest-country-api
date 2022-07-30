@@ -37,8 +37,8 @@ const SearchFilterBar = (props) => {
         <FormControl
           sx={{
             boxShadow: "1",
-            maxWith: "400px",
-            minWidth: "350px",
+            // maxWith: "350px",
+            minWidth: "330px",
             backgroundColor: "background.paper",
           }}
         >
