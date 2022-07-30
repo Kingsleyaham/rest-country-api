@@ -2,7 +2,8 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import DarkModeIcon from "@mui/icons-material/NightsStayOutlined";
-// import {useContext } from "react";
+import { ColorModeContext } from "../context/ThemeContext";
+import { useContext } from "react";
 
 const darkImageStyle = {
   fontWeight: 600,
@@ -10,6 +11,8 @@ const darkImageStyle = {
 };
 
 const Header = (props) => {
+  const colorMode = useContext(ColorModeContext);
+
   return (
     <Box
       sx={{ py: "1em", boxShadow: "2", backgroundColor: "background.paper" }}
@@ -25,7 +28,11 @@ const Header = (props) => {
           <Grid item>
             <h3>Where in the World?</h3>
           </Grid>
-          <Grid item onClick={props.colorMode} sx={{ cursor: "pointer" }}>
+          <Grid
+            item
+            onClick={colorMode.toggleColorMode}
+            sx={{ cursor: "pointer" }}
+          >
             <Box display="flex">
               <p>
                 <DarkModeIcon fontSize="small" />
