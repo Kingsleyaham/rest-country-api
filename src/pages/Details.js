@@ -8,7 +8,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
-const Details = () => {
+const Details = (props) => {
   const [country, setCountry] = useState(null);
   const [isPending, setIsPending] = useState(true);
   const [borderCountries, setBorderCountries] = useState(null);
@@ -22,8 +22,18 @@ const Details = () => {
 
   const redirectUser = (page) => {
     navigate(`/${page}`);
+    setIsPending(true);
 
-    window.location.reload();
+    (async () => {
+      try {
+        const response = await axios.get(`${url}/name/${page}?fullText=true`);
+        setIsPending(false);
+        setCountry(response.data[0]);
+        getCountryNameUsingCode(response.data[0].borders);
+      } catch (error) {
+        console.error(error);
+      }
+    })();
   };
 
   useEffect(() => {
@@ -35,7 +45,6 @@ const Details = () => {
         setIsPending(false);
         setCountry(response.data[0]);
         getCountryNameUsingCode(response.data[0].borders);
-        console.log(response.data);
       } catch (error) {
         console.error(error);
       }

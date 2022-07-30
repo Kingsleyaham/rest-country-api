@@ -39,7 +39,7 @@ const SearchFilterBar = (props) => {
             boxShadow: "1",
             maxWith: "400px",
             minWidth: "350px",
-            backgroundColor: "#fff",
+            backgroundColor: "background.paper",
           }}
         >
           <TextField
@@ -55,6 +55,10 @@ const SearchFilterBar = (props) => {
             onChange={(e) => handleSearch(e.target.value)}
             value={search}
             aria-describedby="search bar"
+            sx={{
+              border: 0,
+              outline: 0,
+            }}
           />
         </FormControl>
       </Grid>
@@ -64,7 +68,12 @@ const SearchFilterBar = (props) => {
             boxShadow: "1",
             maxWidth: "300px",
             minWidth: "220px",
-            backgroundColor: "#fff",
+            backgroundColor: "background.paper",
+            border: "none",
+            "&:focus": {
+              outline: "none",
+              border: "none",
+            },
           }}
         >
           <Select

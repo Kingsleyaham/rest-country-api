@@ -8,6 +8,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 const Home = (props) => {
   const countries = props.countries;
 
+
+
   return (
     <Box paddingBottom={5}>
       <Container maxWidth="lg">
@@ -45,7 +47,7 @@ const Home = (props) => {
             ))}
           </Grid>
         )}
-      </Container>
+             </Container>
     </Box>
   );
 };
