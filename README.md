@@ -34,7 +34,7 @@ Users Can be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/Kingsleyaham/rest-country-api)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://country-api-proj.netlify.app/)
 
 ## My process
 
