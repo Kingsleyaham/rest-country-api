@@ -48,6 +48,6 @@ Users Can be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@Kingsleyaham](https://www.frontendmentor.io/profile/Kingsleyaham)
+- Twitter - [@aham_kingsley8](https://twitter.com/aham_kingsley8)
+- Linkedin - [@kingsley-aham-282a51225](https://www.linkedin.com/in/kingsley-aham-282a51225/)
